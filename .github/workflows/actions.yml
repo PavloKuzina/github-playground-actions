@@ -12,5 +12,15 @@ jobs:
           uses: actions/hello-world-javascript-action@v1
           with:
             who-to-greet: ${{ github.actor }}
+        - name: List of files
+          run: |
+            pwd
+            ls -a
+        - name: Checkout
+          uses: actions/checkout@v2
+        - name: List of Files after checkout
+          run: |
+            pwd
+            ls
         - name: Get the output time
           run: echo "The time was ${{ steps.greet.outputs.time }}"
