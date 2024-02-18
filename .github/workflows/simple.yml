@@ -13,4 +13,10 @@ jobs:
       - name: Echo message
         run: echo "Hello world! 🌍"
 
+      - name: Python platform
+        run: |
+          import platform
+          print(platform.python_version())
+        shell: python
+
 
