@@ -1,6 +1,7 @@
 name: GitHub playground
 
-on: [push]
+on:
+  - push
 
 jobs:
   prompt-node-version:
@@ -19,6 +20,8 @@ jobs:
         shell: python
   window-pwd-propmt:
     runs-on: windows-latest
+    needs:
+      - prompt-node-version
     steps:
       - name: Directory-Location
         run: Get-Location
