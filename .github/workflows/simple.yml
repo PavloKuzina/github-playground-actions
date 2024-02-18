@@ -12,11 +12,17 @@ jobs:
           npm -v
       - name: Echo message
         run: echo "Hello world! 🌍"
-
       - name: Python platform
         run: |
           import platform
           print(platform.python_version())
         shell: python
+  window-pwd-propmt:
+    runs-on: windows-latest
+    steps:
+      - name: Directory-Location
+        run: Get-Location
+      - name: Directory-Bash
+        run: pwd
 
 
