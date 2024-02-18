@@ -1,0 +1,16 @@
+name: GitHub Actions
+
+on:
+  - push
+
+jobs:
+  run-gh-actions:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Simple JS Action
+          id: greet
+          uses: actions/hello-world-javascript-action@v1
+          with:
+            who-to-greet: ${{ github.actor }}
+        - name: Get the output time
+          run: echo "The time was ${{ steps.greet.outputs.time }}"
