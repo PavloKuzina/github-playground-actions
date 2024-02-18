@@ -1,0 +1,16 @@
+name: GitHub playground
+
+on: [push]
+
+jobs:
+  prompt-node-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check node version
+        run: |
+          node -v
+          npm -v
+      - name: Echo message
+        run: echo "Hello world! 🌍"
+
+
